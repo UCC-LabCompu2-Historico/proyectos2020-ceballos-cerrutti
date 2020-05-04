@@ -3,18 +3,39 @@ body
     background: #00adff;
     text-align: center;
     color: rgb(255, 253, 254);
+    font-family: 'Raleway', sans-serif;
+    font-size: 25px;
+    padding: 20px;
 }
-.Botones:hover
+div h1
 {
-    font-weight: bold;
-    color: white;
-
+    font-size: 100px;
 }
 nav
 {
     border: aquamarine solid 5px;
+    padding: 5px 30px;
+    border-radius: 15px;
 }
+.Principal:hover
+{
+    border: aquamarine solid 5px;
+    margin: 10px;
+}
+.Botones:hover
+ {
+     font-weight: bold;
+     color: white;
+ }
  #Cabecera
  {
      font-weight: bold;
+     font-size: 40px;
+     font-family: 'Dancing Script', cursive;
+     text-align: center;
+ }
+ img
+ {
+     float: left;
+     padding: unset;
  }
