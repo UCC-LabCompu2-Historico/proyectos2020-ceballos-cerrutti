@@ -45,3 +45,33 @@ img {
     float: left;
     padding: unset;
 }
+.Sales{
+    column-count: 12;
+    margin: 20px 20px;
+    text-align: left;
+    column-gap:20px;
+}
+.Hidruros1{
+    column-count: 10;
+    margin: 20px 20px;
+    text-align: left;
+    column-gap:40px;
+}
+.Hidruros2{
+    column-count: 10;
+    margin: 20px 20px;
+    text-align: left;
+    column-gap:40px;
+}
+.Oxidos1{
+    column-count: 10;
+    margin: 20px 20px;
+    text-align: left;
+    column-gap:40px;
+}
+.Oxidos2{
+    column-count: 10;
+    margin: 20px 20px;
+    text-align: left;
+    column-gap:40px;
+}
