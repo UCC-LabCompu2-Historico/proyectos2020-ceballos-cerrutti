@@ -9,7 +9,11 @@ body {
 
 #Titulos {
     font-size: 25px;
-    color: rgb(255, 127, 161);
+    color: rgb(255, 176, 176);
+}
+#Titulos1 {
+    font-size: 25px;
+    color: rgb(255, 179, 166);
 }
 
 nav {
@@ -35,22 +39,34 @@ nav {
 }
 
 #Cabecera {
+    column-count: 1;
     font-weight: bold;
     font-size: 40px;
     font-family: 'Dancing Script', cursive;
     text-align: center;
 }
-
-img {
+#Imagen\ 1 {
     float: left;
     padding: unset;
 }
-.Sales{
-    column-count: 12;
+#Imagen\ 2 {
+    float: right;
+    padding: unset;
+}
+.Sales1{
+    column-count: 8;
     margin: 20px 20px;
     text-align: left;
     column-gap:20px;
 }
+
+.Salesresultado{
+    column-count: 4;
+    margin: 20px 20px;
+    text-align: right;
+    column-gap:20px;
+}
+
 .Hidruros1{
     column-count: 10;
     margin: 20px 20px;
