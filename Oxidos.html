@@ -35,95 +35,92 @@
 </div>
 
 <article class="Oxidos1">
-    <h4> Óxido </h4>
+    <form name="OxidosNoMetal">
+        <h4> Óxido </h4>
 
-    <H3> + </H3>
+        <H3> + </H3>
 
-    <h4> No Metal </h4>
-    <select name="No mentales">
-        <option value="B">Boro (B)</option>
-        <option value="C">Carbono (C)</option>
-        <option value="N">Nitrogeno (N)</option>
-        <option value="F">Fluor (F)</option>
-        <option value="Si">Silice (Si)</option>
-        <option value="S">Azufre (S)</option>
-        <option value="Cl">Cloro (Cl)</option>
-        <option value="As">Arsénico (As)</option>
-        <option value="Se">Selenio (Se)</option>
-        <option value="Br">Bromo (Br)</option>
-        <option value="Te">Telurio (Te)</option>
-        <option value="I">Iodo (I)</option>
-    </select>
+        <h4> No Metal </h4>
+        <select name="Nomentales" onchange="Calcular_O_NoMetales(this.value, OxidosNoMetal.Valencia.value)">
+            <option value="B">Boro (B)</option>
+            <option value="C">Carbono (C)</option>
+            <option value="N">Nitrogeno (N)</option>
+            <option value="F">Fluor (F)</option>
+            <option value="Si">Silice (Si)</option>
+            <option value="S">Azufre (S)</option>
+            <option value="Cl">Cloro (Cl)</option>
+            <option value="As">Arsénico (As)</option>
+            <option value="Se">Selenio (Se)</option>
+            <option value="Br">Bromo (Br)</option>
+            <option value="Te">Telurio (Te)</option>
+            <option value="I">Iodo (I)</option>
+        </select>
 
-    <h4> Valencia </h4>
-    <select name="Valencia">
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-        <option value="6">6</option>
-        <option value="7">7</option>
-    </select>
+        <h4> Valencia </h4>
+        <select name="Valencia" onchange="Calcular_O_NoMetales(this.value, OxidosNoMetal.Nomentales.value)">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+        </select>
 
-    <H3> ----> </H3>
+        <H3> ----> </H3>
 
-    <input type="text" name="Resultado" placeholder="Resultado">
+        <input type="text" name="Resultado" placeholder="Resultado">
+    </form>
 </article>
 
 
 <article class="Oxidos2">
-    <h4> Óxido </h4>
+    <form name="OxidosMetal">
+        <h4> Óxido </h4>
 
-    <H3> + </H3>
+        <H3> + </H3>
 
-    <h4> Metal </h4>
-    <select name="Mentales">
-        <option value="Li">Litio (Li)</option>
-        <option value="Be">Berilio (Be)</option>
-        <option value="Na">Sodio(Na)</option>
-        <option value="Mg">Magnesio (Mg)</option>
-        <option value="Al">Aluminio (Al)</option>
-        <option value="K">Potasio (K)</option>
-        <option value="Ca">Calcio (Ca)</option>
-        <option value="Sc">Escandio (Sc)</option>
-        <option value="Ti">Titanio (Ti)</option>
-        <option value="V">Vanadio (V)</option>
-        <option value="Cr">Cromo (Cr)</option>
-        <option value="Mn">Manganeso (Mn)</option>
-        <option value="Fe">Hierro (Fe)</option>
-        <option value="Co">Cobalto (Co)</option>
-        <option value="Ni">Niquel (Ni)</option>
-        <option value="Cu">Cobre (Cu)</option>
-        <option value="Zn">Cinc (Zn)</option>
-        <option value="Rb">Rubidio (Rb)</option>
-        <option value="Pd">Paladio (Pd)</option>
-        <option value="Ag">Plata (Ag)</option>
-        <option value="Cd">Cadmio (Cd)</option>
-        <option value="Sn">Estaño (Sn)</option>
-        <option value="Cs">Cesio (Cs)</option>
-        <option value="Ba">Bario (Ba)</option>
-        <option value="Pt">Platino (Pt)</option>
-        <option value="Au">Oro (Au)</option>
-        <option value="Hg">Mercurio (Hg)</option>
-        <option value="Tl">Talio (Tl)</option>
-        <option value="Pb">Plomo (Pb)</option>
-    </select>
+        <h4> Metal </h4>
+        <select name="Mentales" onchange="Calcular_O_Metales(this.value, OxidosMetal.Valencia.value)" >
+            <option value="H">Hidrógeno (H)</option>
+            <option value="Li">Litio (Li)</option>
+            <option value="Be">Berilio (Be)</option>
+            <option value="Na">Sodio(Na)</option>
+            <option value="Mg">Magnesio (Mg)</option>
+            <option value="Al">Aluminio (Al)</option>
+            <option value="K">Potasio (K)</option>
+            <option value="Ca">Calcio (Ca)</option>
+            <option value="Cr">Cromo (Cr)</option>
+            <option value="Mn">Manganeso (Mn)</option>
+            <option value="Fe">Hierro (Fe)</option>
+            <option value="Co">Cobalto (Co)</option>
+            <option value="Ni">Niquel (Ni)</option>
+            <option value="Cu">Cobre (Cu)</option>
+            <option value="Zn">Cinc (Zn)</option>
+            <option value="Ag">Plata (Ag)</option>
+            <option value="Cs">Cesio (Cs)</option>
+            <option value="Ba">Bario (Ba)</option>
+            <option value="Pt">Platino (Pt)</option>
+            <option value="Au">Oro (Au)</option>
+            <option value="Hg">Mercurio (Hg)</option>
+            <option value="Pb">Plomo (Pb)</option>
+        </select>
 
-    <h4> Valencia </h4>
-    <select name="Valencia">
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-        <option value="6">6</option>
-        <option value="7">7</option>
-    </select>
+        <h4> Valencia </h4>
+        <select name="Valencia" onchange="Calcular_O_Metales(this.value, OxidosMetal.Mentales.value)">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+        </select>
 
-    <H3> ----> </H3>
+        <H3> ----> </H3>
 
-    <input type="text" name="Resultado" placeholder="Resultado">
+        <input type="text" name="Resultado" placeholder="Resultado">
+    </form>
 </article>
 
 <nav class="Botones">
