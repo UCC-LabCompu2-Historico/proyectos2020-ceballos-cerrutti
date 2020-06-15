@@ -35,39 +35,36 @@
     <p>Ejemplo: Cl + Na ----> NaCl</p>
 </div>
 
+<form name="SalesRes">
     <article class="Sales1">
-        <form name="Sales1">
-        <div>
-            <h4> No Metal </h4>
-            <select name="Nomentales" onchange="Calcular_Sales(this.value, Sales1.value)">
-                <option value="Cl">Cloro (Cl)</option>
-                <option value="Br">Bromo (Br)</option>
-                <option value="I">Iodo (I)</option>
-            </select>
+            <div>
+                <h4> No Metal </h4>
+                <select name="Nometales" onchange="Calcular_Sales(this.value, SalesRes.Metales.value, SalesRes.Valencia2.value)">
+                    <option value="Cl">Cloro (Cl)</option>
+                    <option value="Br">Bromo (Br)</option>
+                    <option value="I">Iodo (I)</option>
+                </select>
 
-            <h4> Valencia </h4>
-            <select name="Valencia1">
-                <option value="-1">-1</option>
-            </select>
-        </div>
-        </form>
+                <h4> Valencia </h4>
+                <select name="Valencia1">
+                    <option value="-1">-1</option>
+                </select>
+            </div>
     </article>
 
     <article class="Salesresultado">
-        <form name="SalesRes">
+
         <div>
             <H3> + </H3>
             <H3> ----> </H3>
             <input type="text" name="Resultado" placeholder="Resultado">
         </div>
-        </form>
     </article>
 
     <article class="Sales1">
-        <form name="Sales2">
         <div>
             <h4> Metal </h4>
-            <select name="Mentales" onchange="Calcular_Sales(this.value, Sales2.Valencia2.value)" >
+            <select name="Metales" onchange="Calcular_Sales(SalesRes.Nometales.value, this.value, SalesRes.Valencia2.value)" >
                 <option value="Li">Litio (Li)</option>
                 <option value="Be">Berilio (Be)</option>
                 <option value="Na">Sodio(Na)</option>
@@ -92,7 +89,7 @@
             </select>
 
             <h4> Valencia </h4>
-            <select name="Valencia2" onchange="Calcular_Sales(this.value, Sales2.Mentales.value)">
+            <select name="Valencia2" onchange="Calcular_Sales(SalesRes.Nometales.value, SalesRes.Metales.value, SalesRes.Valencia2.value)">
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
@@ -102,9 +99,9 @@
                 <option value="7">7</option>
             </select>
         </div>
-        </form>
-    </article>
 
+    </article>
+</form>
 <nav class="Botones">
     <a href="Oxidos.html">ÓXIDOS</a>
 </nav>

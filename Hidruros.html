@@ -57,7 +57,7 @@
         </select>
 
         <h4> Valencia </h4>
-        <select name="Valencia" onchange="Calcular_H_NoMetales(this.value, HidrurosNoMetales.Nomentales.value)">
+        <select name="Valencia" onchange="Calcular_H_NoMetales(this.value, HidrurosNoMetales.Nometales.value)">
             <option value="-1">-1</option>
             <option value="-2">-2</option>
         </select>
@@ -65,7 +65,7 @@
         <H3> ----> </H3>
         <input type="text" name="Resultado" placeholder="Resultado" onclick="DibujarImagen_M(this.value)">
 
-        <canvas id="myCanvas" class="ejer" width="10px" height="50px">
+        <canvas id="myCanvas" class="ejer" width="100px" height="500px" style="border: 1px solid black">
             Tu navegador no soporta el tag de HTML5 canvas.
         </canvas>
 
@@ -80,7 +80,7 @@
         <H3> + </H3>
 
         <h4> Metal </h4>
-        <select name="Mentales" onchange="Calcular_H_Metales(this.value, HidrurosMetales.Valencia.value)">
+        <select name="Metales" onchange="Calcular_H_Metales(this.value, HidrurosMetales.Valencia.value)">
             <option value="Li">Litio (Li)</option>
             <option value="Na">Sodio(Na)</option>
             <option value="K">Potasio (K)</option>
@@ -89,7 +89,7 @@
         </select>
 
         <h4> Valencia </h4>
-        <select name="Valencia" onchange="Calcular_H_Metales(this.value, HidrurosMetales.Mentales.value)">
+        <select name="Valencia" onchange="Calcular_H_Metales(this.value, HidrurosMetales.Metales.value)">
             <option value="1">1</option>
         </select>
 
@@ -97,7 +97,7 @@
 
         <input type="text" name="Resultado" placeholder="Resultado" onclick="DibujarImagen_NM(this.value)">
 
-        <canvas id="myCanvas" class="ejer" width="10px" height="50px">
+        <canvas id="myCanvas2" class="ejer" width="10px" height="50px">
             Tu navegador no soporta el tag de HTML5 canvas.
         </canvas>
     </form>
