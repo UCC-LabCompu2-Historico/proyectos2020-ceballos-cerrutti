@@ -10,6 +10,8 @@
           rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Raleway:wght@300;600&display=swap"
           rel="stylesheet">
+    <script type="text/javascript" src="Funciones.js"></script>
+
 </head>
 <body>
 
@@ -33,71 +35,75 @@
     <p>Ejemplo: Cl + Na ----> NaCl</p>
 </div>
 
-<article class="Sales1">
-    <div>
-        <h4> No Metal </h4>
-        <select name="No mentales">
-            <option value="F">Fluor (F)</option>
-            <option value="Cl">Cloro (Cl)</option>
-            <option value="Br">Bromo (Br)</option>
-            <option value="I">Iodo (I)</option>
-        </select>
+    <article class="Sales1">
+        <form name="Sales1">
+        <div>
+            <h4> No Metal </h4>
+            <select name="Nomentales" onchange="Calcular_Sales(this.value, Sales1.value)">
+                <option value="Cl">Cloro (Cl)</option>
+                <option value="Br">Bromo (Br)</option>
+                <option value="I">Iodo (I)</option>
+            </select>
 
-        <h4> Valencia </h4>
-        <select name="Valencia">
-            <option value="-1">-1</option>
-        </select>
-    </div>
-</article>
+            <h4> Valencia </h4>
+            <select name="Valencia1">
+                <option value="-1">-1</option>
+            </select>
+        </div>
+        </form>
+    </article>
 
-<article class="Salesresultado">
-    <div>
-        <H3> + </H3>
-        <H3> ----> </H3>
-        <input type="text" name="Resultado" placeholder="Resultado">
-    </div>
-</article>
+    <article class="Salesresultado">
+        <form name="SalesRes">
+        <div>
+            <H3> + </H3>
+            <H3> ----> </H3>
+            <input type="text" name="Resultado" placeholder="Resultado">
+        </div>
+        </form>
+    </article>
 
-<article class="Sales1">
-    <div>
-        <h4> Metal </h4>
-        <select name="Mentales">
-            <option value="Li">Litio (Li)</option>
-            <option value="Be">Berilio (Be)</option>
-            <option value="Na">Sodio(Na)</option>
-            <option value="Mg">Magnesio (Mg)</option>
-            <option value="Al">Aluminio (Al)</option>
-            <option value="K">Potasio (K)</option>
-            <option value="Ca">Calcio (Ca)</option>
-            <option value="Cr">Cromo (Cr)</option>
-            <option value="Mn">Manganeso (Mn)</option>
-            <option value="Fe">Hierro (Fe)</option>
-            <option value="Co">Cobalto (Co)</option>
-            <option value="Ni">Niquel (Ni)</option>
-            <option value="Cu">Cobre (Cu)</option>
-            <option value="Zn">Cinc (Zn)</option>
-            <option value="Ag">Plata (Ag)</option>
-            <option value="Cs">Cesio (Cs)</option>
-            <option value="Ba">Bario (Ba)</option>
-            <option value="Pt">Platino (Pt)</option>
-            <option value="Au">Oro (Au)</option>
-            <option value="Hg">Mercurio (Hg)</option>
-            <option value="Pb">Plomo (Pb)</option>
-        </select>
+    <article class="Sales1">
+        <form name="Sales2">
+        <div>
+            <h4> Metal </h4>
+            <select name="Mentales" onchange="Calcular_Sales(this.value, Sales2.Valencia2.value)" >
+                <option value="Li">Litio (Li)</option>
+                <option value="Be">Berilio (Be)</option>
+                <option value="Na">Sodio(Na)</option>
+                <option value="Mg">Magnesio (Mg)</option>
+                <option value="Al">Aluminio (Al)</option>
+                <option value="K">Potasio (K)</option>
+                <option value="Ca">Calcio (Ca)</option>
+                <option value="Cr">Cromo (Cr)</option>
+                <option value="Mn">Manganeso (Mn)</option>
+                <option value="Fe">Hierro (Fe)</option>
+                <option value="Co">Cobalto (Co)</option>
+                <option value="Ni">Niquel (Ni)</option>
+                <option value="Cu">Cobre (Cu)</option>
+                <option value="Zn">Cinc (Zn)</option>
+                <option value="Ag">Plata (Ag)</option>
+                <option value="Cs">Cesio (Cs)</option>
+                <option value="Ba">Bario (Ba)</option>
+                <option value="Pt">Platino (Pt)</option>
+                <option value="Au">Oro (Au)</option>
+                <option value="Hg">Mercurio (Hg)</option>
+                <option value="Pb">Plomo (Pb)</option>
+            </select>
 
-        <h4> Valencia </h4>
-        <select name="Valencia">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-        </select>
-    </div>
-</article>
-
+            <h4> Valencia </h4>
+            <select name="Valencia2" onchange="Calcular_Sales(this.value, Sales2.Mentales.value)">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+            </select>
+        </div>
+        </form>
+    </article>
 
 <nav class="Botones">
     <a href="Oxidos.html">ÓXIDOS</a>

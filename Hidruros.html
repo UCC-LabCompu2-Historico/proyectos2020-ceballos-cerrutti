@@ -10,6 +10,7 @@
           rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Raleway:wght@300;600&display=swap"
           rel="stylesheet">
+    <script type="text/javascript" src="Funciones.js"></script>
 
 </head>
 <body>
@@ -42,7 +43,7 @@
         <H3> + </H3>
 
         <h4> No Metal </h4>
-        <select name="Nomentales" onchange="Calcular_H_NoMetales(this.value, HidrurosNoMetales.Valencia.value)">
+        <select name="Nometales" onchange="Calcular_H_NoMetales(this.value, HidrurosNoMetales.Valencia.value)">
             <option value="C">Carbono (C)</option>
             <option value="S">Azufre (S)</option>
             <option value="Se">Selenio (Se)</option>
@@ -62,7 +63,12 @@
         </select>
 
         <H3> ----> </H3>
-        <input type="text" name="Resultado" placeholder="Resultado">
+        <input type="text" name="Resultado" placeholder="Resultado" onclick="DibujarImagen_M(this.value)">
+
+        <canvas id="myCanvas" class="ejer" width="10px" height="50px">
+            Tu navegador no soporta el tag de HTML5 canvas.
+        </canvas>
+
     </form>
 </article>
 
@@ -89,7 +95,11 @@
 
         <H3> ----> </H3>
 
-        <input type="text" name="Resultado" placeholder="Resultado">
+        <input type="text" name="Resultado" placeholder="Resultado" onclick="DibujarImagen_NM(this.value)">
+
+        <canvas id="myCanvas" class="ejer" width="10px" height="50px">
+            Tu navegador no soporta el tag de HTML5 canvas.
+        </canvas>
     </form>
 </article>
 
