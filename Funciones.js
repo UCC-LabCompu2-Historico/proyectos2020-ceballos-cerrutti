@@ -1,290 +1,443 @@
+/**
+ * Calcular los Oxidos - No Metalicos
+ * @method Calcular_O_NoMetales
+ * @param {string} nombre del elemento químico
+ * @param {number} valencia del elemento químico
+ * @return
+ */
 function Calcular_O_NoMetales(element, val) {
+    var OxidosNoMetal;
 
     if (element=="B" && (val==3)){
 
-        OxidosNoMetal.Resultado.value = "B" + "2O" + val;
-    }else{
-        if (element=="C" && (val==2 || val==4)){
+        OxidosNoMetal= "B" + "2O" + val;
+    }else if (element=="C" && (val==2 || val==4)){
 
-            OxidosNoMetal.Resultado.value = "C" + "2O" + val;
-        }else{
-            if (element=="N" && (val==3 || val==5)){
+        OxidosNoMetal= "C" + "2O" + val;
+    }else if (element=="N" && (val==2 || val==4)){
 
-                OxidosNoMetal.Resultado.value = "N" + "2O" + val;
-            }else{
-                if (element=="F" && (val==1)){
+        OxidosNoMetal= "N" + "2O" + val;
+    }else if (element=="F" && (val==1)){
 
-                    OxidosNoMetal.Resultado.value = "F" + "2O" + val;
-                }else{
-                    if (element=="Si" && (val==4)){
+        OxidosNoMetal= "F" + "2O" + val;
+    }else if (element=="Si" && (val==4)){
 
-                        OxidosNoMetal.Resultado.value = "Si" + "2O" + val;
-                    }else{
-                        if (element=="S" && (val==4 || val==6)){
+        OxidosNoMetal= "Si" + "2O" + val;
+    }else if (element=="S" && (val==4 || val==6)){
 
-                            OxidosNoMetal.Resultado.value = "S" + "2O" + val;
-                        }else{
-                            if (element=="Cl" && (val==1 || val==3 || val==5 || val==7)){
+        OxidosNoMetal= "S" + "2O" + val;
+    }else if (element=="Cl" && (val==1 || val==3 || val==5 || val==7)){
 
-                                OxidosNoMetal.Resultado.value = "Cl" + "2O" + val;
-                            }else{
-                                if (element=="As" && (val==3 || val==5)){
+        OxidosNoMetal= "Cl" + "2O" + val;
+    }else if (element=="As" && (val==3 || val==5)){
 
-                                    OxidosNoMetal.Resultado.value = "As" + "2O" + val;
-                                }else{
-                                    if (element=="Se" && (val==4 || val==6)){
+        OxidosNoMetal= "As" + "2O" + val;
+    }else if (element=="Se" && (val==4 || val==6)){
 
-                                        OxidosNoMetal.Resultado.value = "Se" + "2O" + val;
-                                    }else{
-                                        if (element=="Br" && (val==1 || val==3 || val==5 || val==7)){
+        OxidosNoMetal= "Se" + "2O" + val;
+    }else if (element=="Br" && (val==1 || val==3 || val==5 || val==7)){
 
-                                            OxidosNoMetal.Resultado.value = "Br" + "2O" + val;
-                                        }else{
-                                            if (element=="Te" && (val==4 || val==6)){
+        OxidosNoMetal= "Br" + "2O" + val;
+    }else if (element=="Te" && (val==4 || val==6)){
 
-                                                OxidosNoMetal.Resultado.value = "Te" + "2O" + val;
-                                            }else{
-                                                if (element=="I" && (val==1 || val==3 || val==5 || val==7)){
+        OxidosNoMetal= "Te" + "2O" + val;
+    }else if (element=="I" && (val==1 || val==3 || val==5 || val==7)){
 
-                                                    OxidosNoMetal.Resultado.value = "I" + "2O" + val;
-                                                }else{
-                                                    alert("Valencia Invalida")
-                                                    OxidosNoMetal.Valencia=" ";
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
+        OxidosNoMetal= "I" + "2O" + val;
     }
+    document.getElementsByName("ResultadoONM")[0].value = OxidosNoMetal;
+    DibujarImagen_ONM();
 }
 
 
-
+/**
+ * Calcular los Oxidos - Metalicos
+ * @method Calcular_O_Metales
+ * @param {string} nombre del elemento químico
+ * @param {number} valencia del elemento químico
+ * @return
+ */
 function Calcular_O_Metales(element, val) {
+    var OxidosMetal;
 
     if (element=="H" && (val==1)){
 
-        OxidosMetal.Resultado.value = "H" + "2O" + val;
-    }else{
-        if (element=="Li" && (val==1)){
+        OxidosMetal= "H" + "2O" + val;
+    }else if (element=="Li" && (val==1)){
 
-            OxidosMetal.Resultado.value = "Li" + "2O" + val;
-        }else{
-            if (element=="Be" && (val==2)){
+        OxidosMetal= "Li" + "2O" + val;
+    }else if (element=="Be" && (val==2)){
 
-                OxidosMetal.Resultado.value = "Be" + "2O" + val;
-            }else{
-                if (element=="Na" && (val==1)){
+        OxidosMetal= "Be" + "2O" + val;
+    }else if (element=="Na" && (val==1)){
 
-                    OxidosMetal.Resultado.value = "Na" + "2O" + val;
-                }else{
-                    if (element=="Mg" && (val==2)){
+        OxidosMetal= "Na" + "2O" + val;
+    }else if (element=="Mg" && (val==2)){
 
-                        OxidosMetal.Resultado.value = "Mg" + "2O" + val;
-                    }else{
-                        if (element=="Al" && (val==3)){
+        OxidosMetal= "Mg" + "2O" + val;
+    }else if (element=="Al" && (val==3)){
 
-                            OxidosMetal.Resultado.value = "Al" + "2O" + val;
-                        }else{
-                            if (element=="K" && (val==1)){
+        OxidosMetal= "Al" + "2O" + val;
+    }else if (element=="K" && (val==1)){
 
-                                OxidosMetal.Resultado.value = "K" + "2O" + val;
-                            }else{
-                                if (element=="Ca" && (val==2)){
+        OxidosMetal= "K" + "2O" + val;
+    }else if (element=="Ca" && (val==2)){
 
-                                    OxidosMetal.Resultado.value = "Ca" + "2O" + val;
-                                }else{
-                                    if (element=="Cr" && (val==2 || val==3)){
+        OxidosMetal= "Ca" + "2O" + val;
+    }else if (element=="Cr" && (val==2 || val==3)){
 
-                                        OxidosMetal.Resultado.value = "Cr" + "2O" + val;
-                                    }else{
-                                        if (element=="Mn" && (val==2 || val==3)){
+        OxidosMetal= "Cr" + "2O" + val;
+    }else if (element=="Mn" && (val==2 || val==3)){
 
-                                            OxidosMetal.Resultado.value = "Mn" + "2O" + val;
-                                        }else{
-                                            if (element=="Fe" && (val==2 || val==3)){
+        OxidosMetal= "Mn" + "2O" + val;
+    }else if (element=="Fe" && (val==2 || val==3)){
 
-                                                OxidosMetal.Resultado.value = "Fe" + "2O" + val;
-                                            }else{
-                                                if (element=="Co" && (val==2 || val==3)){
+        OxidosMetal= "Fe" + "2O" + val;
+    }else if (element=="Co" && (val==2 || val==3)){
 
-                                                    OxidosMetal.Resultado.value = "Co" + "2O" + val;
-                                                }else{
-                                                    if (element=="Ni" && (val==2 || val==3)){
+        OxidosMetal= "Co" + "2O" + val;
+    }else if (element=="Ni" && (val==2 || val==3)){
 
-                                                        OxidosMetal.Resultado.value = "Ni" + "2O" + val;
-                                                    }else{
-                                                        if (element=="Cu" && (val==1 || val==2)){
+        OxidosMetal= "Ni" + "2O" + val;
+    }else if (element=="Cu" && (val==1 || val==2)){
 
-                                                            OxidosMetal.Resultado.value = "Cu" + "2O" + val;
-                                                        }else{
-                                                            if (element=="Zn" && (val==2)){
+        OxidosMetal= "Cu" + "2O" + val;
+    }else if (element=="Zn" && (val==2)){
 
-                                                                OxidosMetal.Resultado.value = "Zn" + "2O" + val;
-                                                            }else{
-                                                                if (element=="Ag" && (val==1)){
+        OxidosMetal= "Zn" + "2O" + val;
+    }else if (element=="Ag" && (val==1)){
 
-                                                                    OxidosMetal.Resultado.value = "Ag" + "2O" + val;
-                                                                }else{
-                                                                    if (element=="Cs" && (val==1)){
+        OxidosMetal= "Ag" + "2O" + val;
+    }else if (element=="Cs" && (val==1)){
 
-                                                                        OxidosMetal.Resultado.value = "Cs" + "2O" + val;
-                                                                    }else{
-                                                                        if (element=="Ba" && (val==2)){
+        OxidosMetal= "Cs" + "2O" + val;
+    }else if (element=="Ba" && (val==2)){
 
-                                                                            OxidosMetal.Resultado.value = "Ba" + "2O" + val;
-                                                                        }else{
-                                                                            if (element=="Pt" && (val==2 || val==4)){
+        OxidosMetal= "Ba" + "2O" + val;
+    }else if (element=="Pt" && (val==2 || val==4)){
 
-                                                                                OxidosMetal.Resultado.value = "Pt" + "2O" + val;
-                                                                            }else{
-                                                                                if (element=="Au" && (val==1 || val==3)){
+        OxidosMetal= "Pt" + "2O" + val;
+    }else if (element=="Au" && (val==1 || val==3)){
 
-                                                                                    OxidosMetal.Resultado.value = "Au" + "2O" + val;
-                                                                                }else{
-                                                                                    if (element=="Hg" && (val==1 || val==2)){
+        OxidosMetal= "Au" + "2O" + val;
+    }else if (element=="Hg" && (val==1 || val==2)){
 
-                                                                                        OxidosMetal.Resultado.value = "Hg" + "2O" + val;
-                                                                                    }else{
-                                                                                        if (element=="Pb" && (val==2 || val==4)){
+        OxidosMetal= "Hg" + "2O" + val;
+    }else if (element=="Pb" && (val==2 || val==4)){
 
-                                                                                            OxidosMetal.Resultado.value = "Pb" + "2O" + val;
-                                                                                        }else{
-                                                                                            alert("Valencia Invalida")
-                                                                                            OxidosMetal.Valencia=" ";
-                                                                                        }
-                                                                                    }
-                                                                                }
-                                                                            }
-                                                                        }
-                                                                    }
-                                                                }
-                                                            }
-                                                        }
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
+        OxidosMetal= "Pb" + "2O" + val;
     }
+    document.getElementsByName("ResultadoOM")[0].value = OxidosMetal;
+    DibujarImagen_OM();
 }
 
 
 
-
+/**
+ * Calcular los Hidruros - No Metalicos
+ * @method Calcular_H_NoMetales
+ * @param {string} nombre del elemento químico
+ * @param {number} valencia del elemento químico
+ * @return
+ */
 function Calcular_H_NoMetales(element, val) {
+    var HidrurosNoMetales;
 
     if (element=="C" && (val==-2)){
 
-        HidrurosNoMetales.Resultado.value = "H" + "2C";
-    }else{
-        if (element=="S" && (val==-2)){
+        HidrurosNoMetales= "H" + "2C";
+    }else if (element=="S" && (val==-2)){
 
-            HidrurosNoMetales.Resultado.value = "H" + "2S";
-        }else{
-            if (element=="Se" && (val==-2)){
+        HidrurosNoMetales= "H" + "2S";
+    }else if (element=="Se" && (val==-2)){
 
-                HidrurosNoMetales.Resultado.value = "H" + "2Se";
-            }else{
-                if (element=="Te" && (val==-2)){
+        HidrurosNoMetales= "H" + "2Se";
+    }else if (element=="Te" && (val==-2)){
 
-                    HidrurosNoMetales.Resultado.value = "H" + "2Te";
-                }else{
-                    if (element=="N" && (val==-1)){
+        HidrurosNoMetales= "H" + "2Te";
+    }else if (element=="N" && (val==-1)){
 
-                        HidrurosNoMetales.Resultado.value = "H" + "N";
-                    }else{
-                        if (element=="F" && (val==-1)){
+        HidrurosNoMetales= "H" + "N";
+    }else if (element=="F" && (val==-1)){
 
-                            HidrurosNoMetales.Resultado.value = "H" + "F";
-                        }else{
-                            if (element=="Cl" && (val==-1)){
+        HidrurosNoMetales= "H" + "F";
+    }else if (element=="Cl" && (val==-1)){
 
-                                HidrurosNoMetales.Resultado.value = "H" + "Cl";
-                            }else{
-                                if (element=="Br" && (val==-1)){
+        HidrurosNoMetales= "H" + "Cl";
+    }else if (element=="Br" && (val==-1)){
 
-                                    HidrurosNoMetales.Resultado.value = "H" + "Br";
-                                }else{
-                                    if (element=="I" && (val==-1)){
+        HidrurosNoMetales= "H" + "Br";
+    }else if (element=="I" && (val==-1)){
 
-                                        HidrurosNoMetales.Resultado.value = "H" + "I";
-                                    }else{
-                                        alert("Valencia Invalida")
-                                        HidrurosNoMetales.Valencia=" ";
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
+        HidrurosNoMetales= "H" + "I";
     }
+    document.getElementsByName("ResultadoHNM")[0].value = HidrurosNoMetales;
+    DibujarImagen_HNM();
 }
 
 
 
+/**
+ * Calcular los Hidruros - Metalicos
+ * @method Calcular_H_Metales
+ * @param {string} nombre del elemento químico
+ * @param {number} valencia del elemento químico
+ * @return
+ */
 function Calcular_H_Metales(element, val) {
+    var HidrurosMetales;
 
     if (element == "Li" && (val == 1)) {
 
-        HidrurosMetales.Resultado.value = "Li" + "H";
-    }else{
-        if (element == "Na" && (val == 1)) {
+        HidrurosMetales= "Li" + "H";
+    }else if (element == "Na" && (val == 1)) {
 
-            HidrurosMetales.Resultado.value = "Na" + "H";
-        }else{
-            if (element == "K" && (val == 1)) {
+        HidrurosMetales= "Na" + "H";
+    }else if (element == "K" && (val == 1)) {
 
-                HidrurosMetales.Resultado.value = "K" + "H";
-            }else{
-                if (element == "Rb" && (val == 1)) {
+        HidrurosMetales= "K" + "H";
+    }else if (element == "Rb" && (val == 1)) {
 
-                    HidrurosMetales.Resultado.value = "Rb" + "H";
-                }else{
-                    if (element == "Cs" && (val == 1)) {
+        HidrurosMetales= "Rb" + "H";
+    }else if (element == "Cs" && (val == 1)) {
 
-                        HidrurosMetales.Resultado.value = "Cs" + "H";
-                    }
-                }
-            }
-        }
+        HidrurosMetales= "Cs" + "H";
+    }
+    document.getElementsByName("ResultadoHM")[0].value = HidrurosMetales;
+    DibujarImagen_HM();
+}
+
+
+
+/**
+ * Calcular Sales Binarias
+ * @method Calcular_Sales
+ * @param {string} nombre del elemento químico (No Metal)
+ * @param {string} nombre del elemento químico (Metal)
+ * @param {number} valencia del elemento químico (Metal)
+ * @return
+ */
+function Calcular_Sales (element1, element2, val) {
+    var Sales;
+
+    if(element1=="Cl" && (element2=="Li" && (val==1))) {
+        Sales = "Li" + "Cl" + val;
+    }else if(element1=="Cl" && (element2=="Na" && (val==1))) {
+        Sales = "Na" + "Cl" + val;
+    }else if(element1=="Cl" && (element2=="Mg" && (val==2))) {
+        Sales = "Mg" + "Cl" + val;
+    }else if(element1=="Cl" && (element2=="Al" && (val==3))) {
+        Sales = "Al" + "Cl" + val;
+    }else if(element1=="Cl" && (element2=="K" && (val==1))) {
+        Sales = "K" + "Cl" + val;
+    }else if(element1=="Cl" && (element2=="Ca" && (val==2))) {
+        Sales = "Ca" + "Cl" + val;
+    }else if(element1=="Cl" && (element2=="Fe" && (val==2 || val==3))) {
+        Sales = "Fe" + "Cl" + val;
+    }else if(element1=="Cl" && (element2=="Ni" && (val==2 || val==3))) {
+        Sales = "Ni" + "Cl" + val;
+    }else if(element1=="Cl" && (element2=="Cu" && (val==1 || val==2))) {
+        Sales = "Cu" + "Cl" + val;
+    }else if(element1=="Cl" && (element2=="Zn" && (val==2))) {
+        Sales = "Zn" + "Cl" + val;
+    }else if(element1=="Cl" && (element2=="Ag" && (val==1))) {
+        Sales = "Ag" + "Cl" + val;
+    }else if(element1=="Cl" && (element2=="Cs" && (val==1))) {
+        Sales = "Cs" + "Cl" + val;
+    } else if(element1=="Cl" && (element2=="Ba" && (val==2))) {
+        Sales = "Ba" + "Cl" + val;
+    }else if(element1=="Cl" && (element2=="Au" && (val==1 || val==3))) {
+        Sales = "Au" + "Cl" + val;
+    }else if(element1=="Cl" && (element2=="Pb" && (val==2 || val==4))) {
+        Sales = "Pb" + "Cl" + val;
+    }if(element1=="Br" && (element2=="Li" && (val==1))) {
+        Sales = "Li" + "Br" + val;
+    }else if(element1=="Br" && (element2=="Na" && (val==1))) {
+        Sales = "Na" + "Br" + val;
+    }else if(element1=="Br" && (element2=="Mg" && (val==2))) {
+        Sales = "Mg" + "Br" + val;
+    }else if(element1=="Br" && (element2=="Al" && (val==3))) {
+        Sales = "Al" + "Br" + val;
+    }else if(element1=="Br" && (element2=="K" && (val==1))) {
+        Sales = "K" + "Br" + val;
+    }else if(element1=="Br" && (element2=="Ca" && (val==2))) {
+        Sales = "Ca" + "Br" + val;
+    }else if(element1=="Br" && (element2=="Fe" && (val==2 || val==3))) {
+        Sales = "Fe" + "Br" + val;
+    }else if(element1=="Br" && (element2=="Ni" && (val==2 || val==3))) {
+        Sales = "Ni" + "Br" + val;
+    }else if(element1=="Br" && (element2=="Cu" && (val==1 || val==2))) {
+        Sales = "Cu" + "Br" + val;
+    }else if(element1=="Br" && (element2=="Zn" && (val==2))) {
+        Sales = "Zn" + "Br" + val;
+    }else if(element1=="Br" && (element2=="Ag" && (val==1))) {
+        Sales = "Ag" + "Br" + val;
+    }else if(element1=="Br" && (element2=="Cs" && (val==1))) {
+        Sales = "Cs" + "Br" + val;
+    } else if(element1=="Br" && (element2=="Ba" && (val==2))) {
+        Sales = "Ba" + "Br" + val;
+    }else if(element1=="Br" && (element2=="Au" && (val==1 || val==3))) {
+        Sales = "Au" + "Br" + val;
+    }else if(element1=="Br" && (element2=="Pb" && (val==2 || val==4))) {
+        Sales = "Pb" + "Br" + val;
+    }else if(element1=="I" && (element2=="Li" && (val==1))) {
+        Sales = "Li" + "I" + val;
+    }else if(element1=="I" && (element2=="Na" && (val==1))) {
+        Sales = "Na" + "I" + val;
+    }else if(element1=="I" && (element2=="Mg" && (val==2))) {
+        Sales = "Mg" + "I" + val;
+    }else if(element1=="I" && (element2=="Al" && (val==3))) {
+        Sales = "Al" + "I" + val;
+    }else if(element1=="I" && (element2=="K" && (val==1))) {
+        Sales = "K" + "I" + val;
+    }else if(element1=="I" && (element2=="Ca" && (val==2))) {
+        Sales = "Ca" + "I" + val;
+    }else if(element1=="I" && (element2=="Fe" && (val==2 || val==3))) {
+        Sales = "Fe" + "I" + val;
+    }else if(element1=="I" && (element2=="Ni" && (val==2 || val==3))) {
+        Sales = "Ni" + "I" + val;
+    }else if(element1=="I" && (element2=="Cu" && (val==1 || val==2))) {
+        Sales = "Cu" + "I" + val;
+    }else if(element1=="I" && (element2=="Zn" && (val==2))) {
+        Sales = "Zn" + "I" + val;
+    }else if(element1=="I" && (element2=="Ag" && (val==1))) {
+        Sales = "Ag" + "I" + val;
+    }else if(element1=="I" && (element2=="Cs" && (val==1))) {
+        Sales = "Cs" + "I" + val;
+    } else if(element1=="I" && (element2=="Ba" && (val==2))) {
+        Sales = "Ba" + "I" + val;
+    }else if(element1=="I" && (element2=="Au" && (val==1 || val==3))) {
+        Sales = "Au" + "I" + val;
+    }else if(element1=="I" && (element2=="Pb" && (val==2 || val==4))) {
+        Sales = "Pb" + "I" + val;
+    }
+    document.getElementsByName("ResultadoSal")[0].value = Sales;
+    DibujarImagen_Sal();
+}
+
+
+
+/**
+ * Dibuja en el canvas la imagen de un tubo de ensayo con un Oxido No Metalico
+ * @method DibujarImagen_ONM
+ * @param {string} -
+ * @param {number} -
+ * @return
+ */
+function DibujarImagen_ONM() {
+    var canvas = document.getElementById(elementid = "myCanvasO");
+    var ctx = canvas.getContext("2d");
+    canvas.width = canvas.width;
+
+    var xMax = canvas.width;
+    var yMax = canvas.height;
+    var posicionX=20;
+    var posicionY=10;
+
+    var img = new Image();
+    img.src="imagenes/Tubos Azul.png";
+
+    img.onload = function () {
+        ctx.drawImage(img, x=posicionX, y=posicionY, 250, 130);
     }
 }
-function Calcular_Sales (element, element, val) {
-   if(element=="Cl" && (element=="Li" && (val==1))) {
-       Sales.Resultado.value = "Li" + "Cl" + val;
-   }
-}
 
-
-function DibujarImagen_NM() {
-    var canvas = document.getElementById(elementid = "myCanvas");
+/**
+ * Dibuja en el canvas la imagen de un tubo de ensayo con un Oxido Metalico
+ * @method DibujarImagen_OM
+ * @param {string} -
+ * @param {number} -
+ * @return
+ */
+function DibujarImagen_OM() {
+    var canvas = document.getElementById(elementid = "myCanvasO");
     var ctx = canvas.getContext("2d");
     canvas.width = canvas.width;
 
+    var xMax = canvas.width;
+    var yMax = canvas.height;
+    var posicionX=20;
+    var posicionY=10;
+
     var img = new Image();
-    img.src="imagenes/Tubos de ensayo - Azul.jpg";
+    img.src="imagenes/Tubos Amarillo.png";
+
+    img.onload = function () {
+        ctx.drawImage(img, x=posicionX, y=posicionY, 250, 130);
+    }
 }
-function DibujarImagen_M() {
-    var canvas = document.getElementById(elementid = "myCanvas");
+
+/**
+ * Dibuja en el canvas la imagen de un tubo de ensayo con un Hidruro No Metalico
+ * @method DibujarImagen_HNM
+ * @param {string} -
+ * @param {number} -
+ * @return
+ */
+function DibujarImagen_HNM() {
+    var canvas = document.getElementById(elementid = "myCanvasH");
     var ctx = canvas.getContext("2d");
     canvas.width = canvas.width;
 
+    var xMax = canvas.width;
+    var yMax = canvas.height;
+    var posicionX=20;
+    var posicionY=10;
+
     var img = new Image();
-    img.src="imagenes/Tubos de ensayo - Lila.jpg";
+    img.src="imagenes/Tubos Verde.png";
+
+    img.onload = function () {
+        ctx.drawImage(img, x=posicionX, y=posicionY, 250, 130);
+    }
+}
+
+/**
+ * Dibuja en el canvas la imagen de un tubo de ensayo con un Hidruro Metalico
+ * @method DibujarImagen_HM
+ * @param {string} -
+ * @param {number} -
+ * @return
+ */
+function DibujarImagen_HM() {
+    var canvas = document.getElementById(elementid = "myCanvasH");
+    var ctx = canvas.getContext("2d");
+    canvas.width = canvas.width;
+
+    var xMax = canvas.width;
+    var yMax = canvas.height;
+    var posicionX=20;
+    var posicionY=10;
+
+    var img = new Image();
+    img.src="imagenes/Tubos Rojo.png";
+
+    img.onload = function () {
+        ctx.drawImage(img, x=posicionX, y=posicionY, 250, 130);
+    }
+}
+
+/**
+ * Dibuja en el canvas la imagen de un tubo de ensayo con una Sal Binaria
+ * @method DibujarImagen_Sal
+ * @param {string} -
+ * @param {number} -
+ * @return
+ */
+function DibujarImagen_Sal() {
+    var canvas = document.getElementById(elementid = "myCanvasSal");
+    var ctx = canvas.getContext("2d");
+    canvas.width = canvas.width;
+
+    var xMax = canvas.width;
+    var yMax = canvas.height;
+    var posicionX=20;
+    var posicionY=10;
+
+    var img = new Image();
+    img.src="imagenes/Tubos Lila.png";
+
+    img.onload = function () {
+        ctx.drawImage(img, x=posicionX, y=posicionY, 250, 130);
+    }
 }

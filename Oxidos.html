@@ -31,9 +31,13 @@
 <div>
     <h2>¿Qué es un Óxido?</h2>
     <p>Un óxido es un compuesto químico, formado por al menos un átomo de oxígeno y un átomo de algún otro elemento.</p>
-    <p>Ejemplo No Metal: O2 + N5 ----> O5N2</p>
-    <p>Ejemplo Metal: O2 + Fe3 ----> O3Fe2</p>
+    <p>Ejemplo No Metal: O2 + Cl5 ----> Cl2O5</p>
+    <p>Ejemplo Metal: O2 + Fe3 ----> Fe2O3</p>
 </div>
+
+<canvas id="myCanvasO" class="Canvas">
+    Tu navegador no soporta el tag de HTML5 canvas.
+</canvas>
 
 <article class="Oxidos1">
     <form name="OxidosNoMetal">
@@ -42,7 +46,7 @@
         <H3> + </H3>
 
         <h4> No Metal </h4>
-        <select name="Nomentales" onchange="Calcular_O_NoMetales(this.value, OxidosNoMetal.Valencia.value)">
+        <select name="Nometales" onchange="Calcular_O_NoMetales(this.value, OxidosNoMetal.Valencia.value)">
             <option value="B">Boro (B)</option>
             <option value="C">Carbono (C)</option>
             <option value="N">Nitrogeno (N)</option>
@@ -58,7 +62,7 @@
         </select>
 
         <h4> Valencia </h4>
-        <select name="Valencia" onchange="Calcular_O_NoMetales(this.value, OxidosNoMetal.Nomentales.value)">
+        <select name="Valencia" onchange="Calcular_O_NoMetales(this.value, OxidosNoMetal.Nometales.value)">
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -70,10 +74,10 @@
 
         <H3> ----> </H3>
 
-        <input type="text" name="Resultado" placeholder="Resultado">
+        <input type="text" name="ResultadoONM" placeholder="Resultado" onclick="DibujarImagen_ONM(this.value)">
+
     </form>
 </article>
-
 
 <article class="Oxidos2">
     <form name="OxidosMetal">
@@ -82,7 +86,7 @@
         <H3> + </H3>
 
         <h4> Metal </h4>
-        <select name="Mentales" onchange="Calcular_O_Metales(this.value, OxidosMetal.Valencia.value)" >
+        <select name="Metales" onchange="Calcular_O_Metales(this.value, OxidosMetal.Valencia.value)" >
             <option value="H">Hidrógeno (H)</option>
             <option value="Li">Litio (Li)</option>
             <option value="Be">Berilio (Be)</option>
@@ -108,7 +112,7 @@
         </select>
 
         <h4> Valencia </h4>
-        <select name="Valencia" onchange="Calcular_O_Metales(this.value, OxidosMetal.Mentales.value)">
+        <select name="Valencia" onchange="Calcular_O_Metales(this.value, OxidosMetal.Metales.value)">
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -120,7 +124,8 @@
 
         <H3> ----> </H3>
 
-        <input type="text" name="Resultado" placeholder="Resultado">
+        <input type="text" name="ResultadoOM" placeholder="Resultado" onclick="DibujarImagen_OM(this.value)">
+
     </form>
 </article>
 

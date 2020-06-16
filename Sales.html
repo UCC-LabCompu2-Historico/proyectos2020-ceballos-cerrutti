@@ -35,11 +35,15 @@
     <p>Ejemplo: Cl + Na ----> NaCl</p>
 </div>
 
+<canvas id="myCanvasSal" class="Canvas">
+    Tu navegador no soporta el tag de HTML5 canvas.
+</canvas>
+
+<form name="Sales">
     <article class="Sales1">
-        <form name="Sales1">
         <div>
             <h4> No Metal </h4>
-            <select name="Nomentales" onchange="Calcular_Sales(this.value, Sales1.value)">
+            <select name="Nometales" onchange="Calcular_Sales(this.value, Sales.Metales.value, Sales.Valencia2.value)">
                 <option value="Cl">Cloro (Cl)</option>
                 <option value="Br">Bromo (Br)</option>
                 <option value="I">Iodo (I)</option>
@@ -50,61 +54,49 @@
                 <option value="-1">-1</option>
             </select>
         </div>
-        </form>
     </article>
 
     <article class="Salesresultado">
-        <form name="SalesRes">
+
         <div>
             <H3> + </H3>
             <H3> ----> </H3>
-            <input type="text" name="Resultado" placeholder="Resultado">
+            <input type="text" name="ResultadoSal" placeholder="Resultado" onclick="DibujarImagen_Sal(this.value)">
         </div>
-        </form>
     </article>
 
     <article class="Sales1">
-        <form name="Sales2">
         <div>
             <h4> Metal </h4>
-            <select name="Mentales" onchange="Calcular_Sales(this.value, Sales2.Valencia2.value)" >
+            <select name="Metales" onchange="Calcular_Sales(Sales.Nometales.value, this.value, Sales.Valencia2.value)" >
                 <option value="Li">Litio (Li)</option>
-                <option value="Be">Berilio (Be)</option>
                 <option value="Na">Sodio(Na)</option>
                 <option value="Mg">Magnesio (Mg)</option>
                 <option value="Al">Aluminio (Al)</option>
                 <option value="K">Potasio (K)</option>
                 <option value="Ca">Calcio (Ca)</option>
-                <option value="Cr">Cromo (Cr)</option>
-                <option value="Mn">Manganeso (Mn)</option>
                 <option value="Fe">Hierro (Fe)</option>
-                <option value="Co">Cobalto (Co)</option>
                 <option value="Ni">Niquel (Ni)</option>
                 <option value="Cu">Cobre (Cu)</option>
                 <option value="Zn">Cinc (Zn)</option>
                 <option value="Ag">Plata (Ag)</option>
                 <option value="Cs">Cesio (Cs)</option>
                 <option value="Ba">Bario (Ba)</option>
-                <option value="Pt">Platino (Pt)</option>
                 <option value="Au">Oro (Au)</option>
-                <option value="Hg">Mercurio (Hg)</option>
                 <option value="Pb">Plomo (Pb)</option>
             </select>
 
             <h4> Valencia </h4>
-            <select name="Valencia2" onchange="Calcular_Sales(this.value, Sales2.Mentales.value)">
+            <select name="Valencia2" onchange="Calcular_Sales(Sales.Nometales.value, Sales.Metales.value, Sales.Valencia2.value)">
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
                 <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
             </select>
         </div>
-        </form>
-    </article>
 
+    </article>
+</form>
 <nav class="Botones">
     <a href="Oxidos.html">ÓXIDOS</a>
 </nav>

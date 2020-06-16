@@ -91,3 +91,8 @@ nav {
     text-align: left;
     column-gap:40px;
 }
+.Canvas {
+    width: 30px;
+    height:110px;
+    float: left;
+}
