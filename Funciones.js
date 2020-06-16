@@ -14,7 +14,7 @@ function Calcular_O_NoMetales(element, val) {
     }else if (element=="C" && (val==2 || val==4)){
 
         OxidosNoMetal= "C" + "2O" + val;
-    }else if (element=="N" && (val==3 || val==5)){
+    }else if (element=="N" && (val==2 || val==4)){
 
         OxidosNoMetal= "N" + "2O" + val;
     }else if (element=="F" && (val==1)){
@@ -317,64 +317,127 @@ function Calcular_Sales (element1, element2, val) {
 
 
 
-
+/**
+ * Dibuja en el canvas la imagen de un tubo de ensayo con un Oxido No Metalico
+ * @method DibujarImagen_ONM
+ * @param {string} -
+ * @param {number} -
+ * @return
+ */
 function DibujarImagen_ONM() {
-    var canvas = document.getElementById(elementid = "myCanvasONM");
+    var canvas = document.getElementById(elementid = "myCanvasO");
     var ctx = canvas.getContext("2d");
     canvas.width = canvas.width;
 
+    var xMax = canvas.width;
+    var yMax = canvas.height;
+    var posicionX=20;
+    var posicionY=10;
+
     var img = new Image();
-    img.src="imagenes/Tubos de ensayo - Azul.jpg";
+    img.src="imagenes/Tubos Azul.png";
 
     img.onload = function () {
-        ctx.drawImage(img, canvas.width/2, canvas.height/2, 50, 50);
+        ctx.drawImage(img, x=posicionX, y=posicionY, 250, 130);
     }
 }
+
+/**
+ * Dibuja en el canvas la imagen de un tubo de ensayo con un Oxido Metalico
+ * @method DibujarImagen_OM
+ * @param {string} -
+ * @param {number} -
+ * @return
+ */
 function DibujarImagen_OM() {
-    var canvas = document.getElementById(elementid = "myCanvasOM");
+    var canvas = document.getElementById(elementid = "myCanvasO");
     var ctx = canvas.getContext("2d");
     canvas.width = canvas.width;
 
+    var xMax = canvas.width;
+    var yMax = canvas.height;
+    var posicionX=20;
+    var posicionY=10;
+
     var img = new Image();
-    img.src="imagenes/Tubos de ensayo - Amarillo.jpg";
+    img.src="imagenes/Tubos Amarillo.png";
 
     img.onload = function () {
-        ctx.drawImage(img, canvas.width/2, canvas.height/2, 50, 50);
+        ctx.drawImage(img, x=posicionX, y=posicionY, 250, 130);
     }
 }
+
+/**
+ * Dibuja en el canvas la imagen de un tubo de ensayo con un Hidruro No Metalico
+ * @method DibujarImagen_HNM
+ * @param {string} -
+ * @param {number} -
+ * @return
+ */
 function DibujarImagen_HNM() {
-    var canvas = document.getElementById(elementid = "myCanvasHNM");
+    var canvas = document.getElementById(elementid = "myCanvasH");
     var ctx = canvas.getContext("2d");
     canvas.width = canvas.width;
 
+    var xMax = canvas.width;
+    var yMax = canvas.height;
+    var posicionX=20;
+    var posicionY=10;
+
     var img = new Image();
-    img.src="imagenes/Tubos de ensayo - Verde.jpg";
+    img.src="imagenes/Tubos Verde.png";
 
     img.onload = function () {
-        ctx.drawImage(img, canvas.width/2, canvas.height/2, 50, 50);
+        ctx.drawImage(img, x=posicionX, y=posicionY, 250, 130);
     }
 }
+
+/**
+ * Dibuja en el canvas la imagen de un tubo de ensayo con un Hidruro Metalico
+ * @method DibujarImagen_HM
+ * @param {string} -
+ * @param {number} -
+ * @return
+ */
 function DibujarImagen_HM() {
-    var canvas = document.getElementById(elementid = "myCanvasHM");
+    var canvas = document.getElementById(elementid = "myCanvasH");
     var ctx = canvas.getContext("2d");
     canvas.width = canvas.width;
 
+    var xMax = canvas.width;
+    var yMax = canvas.height;
+    var posicionX=20;
+    var posicionY=10;
+
     var img = new Image();
-    img.src="imagenes/Tubos de ensayo - Rojo.jpg";
+    img.src="imagenes/Tubos Rojo.png";
 
     img.onload = function () {
-        ctx.drawImage(img, canvas.width/2, canvas.height/2, 50, 50);
+        ctx.drawImage(img, x=posicionX, y=posicionY, 250, 130);
     }
 }
+
+/**
+ * Dibuja en el canvas la imagen de un tubo de ensayo con una Sal Binaria
+ * @method DibujarImagen_Sal
+ * @param {string} -
+ * @param {number} -
+ * @return
+ */
 function DibujarImagen_Sal() {
     var canvas = document.getElementById(elementid = "myCanvasSal");
     var ctx = canvas.getContext("2d");
     canvas.width = canvas.width;
 
+    var xMax = canvas.width;
+    var yMax = canvas.height;
+    var posicionX=20;
+    var posicionY=10;
+
     var img = new Image();
-    img.src="imagenes/Tubos de ensayo - Lila.jpg";
+    img.src="imagenes/Tubos Lila.png";
 
     img.onload = function () {
-        ctx.drawImage(img, canvas.width/2, canvas.height/2, 50, 50);
+        ctx.drawImage(img, x=posicionX, y=posicionY, 250, 130);
     }
 }
