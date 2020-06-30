@@ -6,13 +6,13 @@ web tiene la funcionalidad de formar Compuestos Binarios a partir de
 el resultado, que sera la formula del compuesto 
 formado de la combinacion de ambos elementos.
 
-##Autores 
+## Autores 
  * Ceballos, Martina Liz
  * Cerrutti, Angie Lucía
  
-##Tecnologías empleadas
+## Tecnologías empleadas
  * HTML
  * CSS
  
-##Link al Sitio
+## Link al Sitio
 [Química - Compuestos Binarios](https://ucc-labcompu2.github.io/proyectos2020-ceballos-cerrutti/Index.html)
