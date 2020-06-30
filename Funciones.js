@@ -459,14 +459,16 @@ function DibujarImagen_Sal() {
 
 
 
-y=0;
-dy=2;
+y1=0;
+dy1=2;
+y2=0;
+dy2=2;
+y3=0;
+dy3=2;
 function AnimarReaccion(){
     var canvas = document.getElementById(elementid = "myCanvasAnimacion");
     var ctx = canvas.getContext("2d");
     canvas.height = canvas.height;
-
-    var yMax = canvas.height;
 
     var img1 = new Image();
     img1.src="imagenes/ParaAnimacion 11.jpg";
@@ -478,18 +480,26 @@ function AnimarReaccion(){
     img3.src="imagenes/ParaAnimacion 33.jpg";
 
     img1.onload = function(){
-        ctx.drawImage(img1, dx= 10, dy=y,70, 100 );
+        ctx.drawImage(img1, dx= 10, dy=y1,70, 100 );
     }
 
     img2.onload = function(){
-        ctx.drawImage(img2, dx= 110, dy=y,70, 100 );
+        ctx.drawImage(img2, dx= 110, dy=y2,70, 100 );
     }
 
     img3.onload = function(){
-        ctx.drawImage(img3, dx= 210, dy=y,70, 100 );
+        ctx.drawImage(img3, dx= 210, dy=y3,70, 100 );
     }
-    if(y>yMax){
-        y=0;
+    if(y1>canvas.height){
+        y1=0;
     }
-    y+=dy;
+    if(y2>canvas.height){
+        y2=0;
+    }
+    if(y3>canvas.height){
+        y3=0;
+    }
+    y1+=dy1;
+    y2+=dy2;
+    y3+=dy3;
 }
