@@ -31,6 +31,16 @@ nav {
     font-weight: bold;
     color: white;
 }
+.BotonCreditos:hover {
+    font-weight: bold;
+    border: #ff7fa1 solid 5px;
+    padding: 5px 30px;
+    border-radius: 15px;
+}
+.Creditos {
+    margin: 80px;
+    text-align: left;
+}
 .VolverPrincipal{
     font-weight: bold;
     border: #ff7fa1 solid 5px;
@@ -45,6 +55,7 @@ nav {
     font-family: 'Dancing Script', cursive;
     text-align: center;
 }
+
 #Imagen\ 1 {
     float: left;
     padding: unset;
@@ -95,4 +106,10 @@ nav {
     width: 30px;
     height:110px;
     float: left;
+}
+.CanvasAnimacion {
+    margin: 50px;
+    width: 500px;
+    height: 250px;
+    float: right;
 }

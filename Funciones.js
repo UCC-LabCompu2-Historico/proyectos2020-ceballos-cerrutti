@@ -44,6 +44,9 @@ function Calcular_O_NoMetales(element, val) {
     }else if (element=="I" && (val==1 || val==3 || val==5 || val==7)){
 
         OxidosNoMetal= "I" + "2O" + val;
+    }else{
+        alert("Valencia Invalida")
+        OxidosNoMetal.Valencia=" ";
     }
     document.getElementsByName("ResultadoONM")[0].value = OxidosNoMetal;
     DibujarImagen_ONM();
@@ -126,6 +129,9 @@ function Calcular_O_Metales(element, val) {
     }else if (element=="Pb" && (val==2 || val==4)){
 
         OxidosMetal= "Pb" + "2O" + val;
+    }else{
+        alert("Valencia Invalida")
+        OxidosMetal.Valencia=" ";
     }
     document.getElementsByName("ResultadoOM")[0].value = OxidosMetal;
     DibujarImagen_OM();
@@ -170,6 +176,9 @@ function Calcular_H_NoMetales(element, val) {
     }else if (element=="I" && (val==-1)){
 
         HidrurosNoMetales= "H" + "I";
+    }else{
+        alert("Valencia Invalida")
+        HidrurosNoMetales.Valencia=" ";
     }
     document.getElementsByName("ResultadoHNM")[0].value = HidrurosNoMetales;
     DibujarImagen_HNM();
@@ -202,6 +211,9 @@ function Calcular_H_Metales(element, val) {
     }else if (element == "Cs" && (val == 1)) {
 
         HidrurosMetales= "Cs" + "H";
+    }else{
+        alert("Valencia Invalida")
+        HidrurosMetales.Valencia=" ";
     }
     document.getElementsByName("ResultadoHM")[0].value = HidrurosMetales;
     DibujarImagen_HM();
@@ -310,6 +322,9 @@ function Calcular_Sales (element1, element2, val) {
         Sales = "Au" + "I" + val;
     }else if(element1=="I" && (element2=="Pb" && (val==2 || val==4))) {
         Sales = "Pb" + "I" + val;
+    }else{
+        alert("Valencia Invalida")
+        Sales.Valencia=" ";
     }
     document.getElementsByName("ResultadoSal")[0].value = Sales;
     DibujarImagen_Sal();
@@ -440,4 +455,41 @@ function DibujarImagen_Sal() {
     img.onload = function () {
         ctx.drawImage(img, x=posicionX, y=posicionY, 250, 130);
     }
+}
+
+
+
+y=0;
+dy=2;
+function AnimarReaccion(){
+    var canvas = document.getElementById(elementid = "myCanvasAnimacion");
+    var ctx = canvas.getContext("2d");
+    canvas.height = canvas.height;
+
+    var yMax = canvas.height;
+
+    var img1 = new Image();
+    img1.src="imagenes/ParaAnimacion 11.jpg";
+
+    var img2 = new Image();
+    img2.src="imagenes/ParaAnimacion 22.jpg";
+
+    var img3 = new Image();
+    img3.src="imagenes/ParaAnimacion 33.jpg";
+
+    img1.onload = function(){
+        ctx.drawImage(img1, dx= 10, dy=y,70, 100 );
+    }
+
+    img2.onload = function(){
+        ctx.drawImage(img2, dx= 110, dy=y,70, 100 );
+    }
+
+    img3.onload = function(){
+        ctx.drawImage(img3, dx= 210, dy=y,70, 100 );
+    }
+    if(y>yMax){
+        y=0;
+    }
+    y+=dy;
 }

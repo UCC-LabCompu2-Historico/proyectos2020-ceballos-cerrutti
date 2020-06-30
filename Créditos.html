@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Química - Compuestos Binarios</title>
+    <title>Creditos</title>
     <link rel="stylesheet" href="Mi_Estilo.css" type="text/css">
     <link rel="shortcut icon" href="imagenes/icono.png">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
@@ -10,9 +10,11 @@
           rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Raleway:wght@300;600&display=swap"
           rel="stylesheet">
+    <script type="text/javascript" src="Funciones.js"></script>
 </head>
 
-<body>
+<body onload="setInterval(AnimarReaccion, 200)">
+
 <nav class="Principal">
     <img src="imagenes/Foto_quimica.png" id="Imagen 1">
     <img src="imagenes/logo-ucc-2018.svg" id="Imagen 2">
@@ -22,31 +24,23 @@
     </header>
 </nav>
 
-<div>
-    <h2>¿Qué es un Compuesto Binario?</h2>
-    <p>Un compuesto binario es un compuesto químico formado por átomos de solo dos elementos de la tabla periódica.
-        Como en el caso del agua(H20), compuesta por dos átomos de hidrógeno y uno de oxígeno.</p>
-    <p>Ejemplo: O2 + H ----> H2O</p>
-</div>
+<canvas id="myCanvasAnimacion" class="CanvasAnimacion">
+    Tu navegador no soporta el tag de HTML5 canvas.
+</canvas>
 
-<header id="Titulos1">
-    <h2>Tipos de Sales Binarias</h2>
+<div class="Creditos">
+<header id="Titulos">
+    <h1>Créditos</h1>
 </header>
 
-<nav class="Botones">
-    <a href="Oxidos.html">ÓXIDOS</a>
-</nav>
+<div>
+    <p>Ceballos, Martina Liz</p>
+    <p>Cerrutti, Angie Lucía</p>
+</div>
+</div>
 
-<nav class="Botones">
-    <a href="Hidruros.html">HIDRUROS</a>
-</nav>
-
-<nav class="Botones">
-    <a href="Sales.html">SALES</a>
-</nav>
-
-<nav class="BotonCreditos">
-    <a href="Créditos.html">CRÉDITOS</a>
+<nav class="VolverPrincipal">
+    <a href="Index.html">PRINCIPAL</a>
 </nav>
 
 </body>
