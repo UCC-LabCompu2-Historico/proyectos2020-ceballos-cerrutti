@@ -459,16 +459,19 @@ function DibujarImagen_Sal() {
 
 
 
-y1=0;
-dy1=2;
-y2=0;
-dy2=2;
-y3=0;
-dy3=2;
+
+/**
+ * Anima una reaccion en un tubo dentro de la pagina de Creditos
+ * @method AnimarReaccion
+ * @param {string} -
+ * @param {number} -
+ * @return
+ */
+var y1=0;
+var dy1=1;
 function AnimarReaccion(){
     var canvas = document.getElementById(elementid = "myCanvasAnimacion");
     var ctx = canvas.getContext("2d");
-    canvas.height = canvas.height;
 
     var img1 = new Image();
     img1.src="imagenes/ParaAnimacion 11.jpg";
@@ -479,27 +482,47 @@ function AnimarReaccion(){
     var img3 = new Image();
     img3.src="imagenes/ParaAnimacion 33.jpg";
 
-    img1.onload = function(){
-        ctx.drawImage(img1, dx= 10, dy=y1,70, 100 );
-    }
+    var img4 = new Image();
+    img4.src="imagenes/ParaAnimacion 44.jpg";
 
-    img2.onload = function(){
-        ctx.drawImage(img2, dx= 110, dy=y2,70, 100 );
-    }
+    var img5 = new Image();
+    img5.src="imagenes/ParaAnimacion 55.jpg";
 
-    img3.onload = function(){
-        ctx.drawImage(img3, dx= 210, dy=y3,70, 100 );
+    var img6 = new Image();
+    img6.src="imagenes/ParaAnimacion 66.jpg";
+
+    if(y1<10){
+        img1.onload = function(){
+            ctx.drawImage(img1, dx= 210, dy= 10,90, 120);
+        }
     }
-    if(y1>canvas.height){
-        y1=0;
+    if(y1>=10 && y1<20){
+        img1.onload = function(){
+            ctx.drawImage(img2, dx= 210, dy= 10,90, 120);
+        }
     }
-    if(y2>canvas.height){
-        y2=0;
+    if(y1>=20 && y1<30){
+        img1.onload = function(){
+            ctx.drawImage(img3, dx= 210, dy=10,90, 120);
+        }
     }
-    if(y3>canvas.height){
-        y3=0;
+    if(y1>=30 && y1<40){
+        img1.onload = function(){
+            ctx.drawImage(img4, dx= 210, dy=10,90, 120);
+        }
+    }
+    if(y1>=40 && y1<50){
+        img1.onload = function(){
+            ctx.drawImage(img5, dx= 210, dy=10,90, 120);
+        }
+    }
+    if(y1>=50 && y1<60){
+        img1.onload = function(){
+            ctx.drawImage(img6, dx= 210, dy=10,90, 120);
+        }
     }
     y1+=dy1;
-    y2+=dy2;
-    y3+=dy3;
+    if(y1>60){
+        y1=0;
+    }
 }
