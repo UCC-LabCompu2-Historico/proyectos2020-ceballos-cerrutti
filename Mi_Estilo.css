@@ -102,6 +102,12 @@ nav {
     text-align: left;
     column-gap:40px;
 }
+.Flecha{
+    width: 45px;
+    height: 20px;
+    margin: 2px 2px;
+    text-align: center;
+}
 .Canvas {
     width: 30px;
     height:110px;
