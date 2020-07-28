@@ -44,10 +44,10 @@
     <form name="HidrurosNoMetales">
         <h4> Hidrógeno </h4>
 
-        <H3> + </H3>
+        <H1> + </H1>
 
         <h4> No Metal </h4>
-        <select name="Nometales" onchange="Calcular_H_NoMetales(this.value, HidrurosNoMetales.Valencia.value)">
+        <select name="Nometales">
             <option value="C">Carbono (C)</option>
             <option value="S">Azufre (S)</option>
             <option value="Se">Selenio (Se)</option>
@@ -61,12 +61,13 @@
         </select>
 
         <h4> Valencia </h4>
-        <select name="Valencia" onchange="Calcular_H_NoMetales(this.value, HidrurosNoMetales.Nometales.value)">
+        <select name="Valencia">
             <option value="-1">-1</option>
             <option value="-2">-2</option>
         </select>
 
-        <H3> ----> </H3>
+        <H3> <button type="button" onclick="Calcular_H_NoMetales(HidrurosNoMetales.Nometales.value, HidrurosNoMetales.Valencia.value)"> <img class="Flecha" src="imagenes/Flecha.png"> </button></H3>
+
         <input disabled type="text" name="ResultadoHNM" placeholder="Resultado" onclick="DibujarImagen_HNM(this.value)">
 
     </form>
@@ -76,10 +77,10 @@
     <form name="HidrurosMetales">
         <h4> Hidrógeno </h4>
 
-        <H3> + </H3>
+        <H1> + </H1>
 
         <h4> Metal </h4>
-        <select name="Metales" onchange="Calcular_H_Metales(this.value, HidrurosMetales.Valencia.value)">
+        <select name="Metales">
             <option value="Li">Litio (Li)</option>
             <option value="Na">Sodio(Na)</option>
             <option value="K">Potasio (K)</option>
@@ -88,11 +89,11 @@
         </select>
 
         <h4> Valencia </h4>
-        <select name="Valencia" onchange="Calcular_H_Metales(this.value, HidrurosMetales.Metales.value)">
+        <select name="Valencia">
             <option value="1">1</option>
         </select>
 
-        <H3> ----> </H3>
+        <H3> <button type="button" onclick="Calcular_H_Metales(HidrurosMetales.Metales.value, HidrurosMetales.Valencia.value)"> <img class="Flecha" src="imagenes/Flecha.png"> </button></H3>
 
         <input disabled type="text" name="ResultadoHM" placeholder="Resultado" onclick="DibujarImagen_HM(this.value)">
 

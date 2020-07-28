@@ -43,10 +43,10 @@
     <form name="OxidosNoMetal">
         <h4> Óxido </h4>
 
-        <H3> + </H3>
+        <H1> + </H1>
 
         <h4> No Metal </h4>
-        <select name="Nometales" onchange="Calcular_O_NoMetales(this.value, OxidosNoMetal.Valencia.value)">
+        <select name="Nometales">
             <option value="B">Boro (B)</option>
             <option value="C">Carbono (C)</option>
             <option value="N">Nitrogeno (N)</option>
@@ -62,7 +62,7 @@
         </select>
 
         <h4> Valencia </h4>
-        <select name="Valencia" onchange="Calcular_O_NoMetales(this.value, OxidosNoMetal.Nometales.value)">
+        <select name="Valencia">
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -72,7 +72,7 @@
             <option value="7">7</option>
         </select>
 
-        <H3> ----> </H3>
+        <H3> <button type="button" onclick="Calcular_O_NoMetales(OxidosNoMetal.Nometales.value, OxidosNoMetal.Valencia.value)"> <img class="Flecha" src="imagenes/Flecha.png"> </button></H3>
 
         <input disabled type="text" name="ResultadoONM" placeholder="Resultado" onclick="DibujarImagen_ONM(this.value)">
 
@@ -83,10 +83,10 @@
     <form name="OxidosMetal">
         <h4> Óxido </h4>
 
-        <H3> + </H3>
+        <H1> + </H1>
 
         <h4> Metal </h4>
-        <select name="Metales" onchange="Calcular_O_Metales(this.value, OxidosMetal.Valencia.value)" >
+        <select name="Metales">
             <option value="H">Hidrógeno (H)</option>
             <option value="Li">Litio (Li)</option>
             <option value="Be">Berilio (Be)</option>
@@ -112,17 +112,14 @@
         </select>
 
         <h4> Valencia </h4>
-        <select name="Valencia" onchange="Calcular_O_Metales(this.value, OxidosMetal.Metales.value)">
+        <select name="Valencia">
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
             <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
         </select>
 
-        <H3> ----> </H3>
+        <H3> <button type="button" onclick="Calcular_O_Metales(OxidosMetal.Metales.value, OxidosMetal.Valencia.value)"> <img class="Flecha" src="imagenes/Flecha.png"> </button></H3>
 
         <input disabled type="text" name="ResultadoOM" placeholder="Resultado" onclick="DibujarImagen_OM(this.value)">
 
